@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
 import Header from './components/Header/Header';
+import ExperienceAlaska from './components/ExperienceAlaska/ExperienceAlaska';
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -76,6 +77,7 @@ const App = () => {
 
     <Router>
       <Header />
+      <ExperienceAlaska/>
       <div style={{ display: 'flex' }}>
         <CssBaseline />
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
