@@ -3,7 +3,7 @@ import { AppBar, Toolbar, IconButton, Badge, MenuItem, Menu, Typography } from '
 import { ShoppingCart } from '@material-ui/icons';
 import { Link, useLocation } from 'react-router-dom';
 
-import logo from '../../assets/commerce.png';
+import logo from '../../assets/fish.jpg';
 import useStyles from './styles';
 
 const PrimarySearchAppBar = ({ totalItems }) => {
@@ -18,10 +18,10 @@ const PrimarySearchAppBar = ({ totalItems }) => {
   const mobileMenuId = 'primary-search-account-menu-mobile';
 
   const renderMobileMenu = (
-    <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} id={mobileMenuId} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right' }} open={isMobileMenuOpen} onClose={handleMobileMenuClose}>
+    <Menu anchorEl={mobileMoreAnchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} position="fixed" id={mobileMenuId} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right' }} open={isMobileMenuOpen} onClose={handleMobileMenuClose}>
       <MenuItem>
-        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="inherit">
-          <Badge badgeContent={totalItems} color="secondary">
+        <IconButton component={Link} to="/cart" aria-label="Show cart items" color="black">
+          <Badge badgeContent={totalItems} color="primary">
             <ShoppingCart />
           </Badge>
         </IconButton>
@@ -35,7 +35,7 @@ const PrimarySearchAppBar = ({ totalItems }) => {
       <AppBar position="fixed" className={classes.appBar} color="inherit">
         <Toolbar>
           <Typography component={Link} to="/" variant="h6" className={classes.title} color="inherit">
-            <img src={logo} alt="commerce.js" height="25px" className={classes.image} /> Commerce.js
+            <img src={logo} alt="fish.jpg" height="25px" className={classes.image} /> Tight Lines
           </Typography>
           <div className={classes.grow} />
           {location.pathname === '/' && (

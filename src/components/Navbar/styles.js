@@ -16,6 +16,10 @@ export default makeStyles((theme) => ({
     alignItems: 'center',
     display: 'flex',
     textDecoration: 'none',
+    fontSize: '35px',
+    fontFamily: "roboto",
+    color: "red",
+    textTransform: "uppercase"
   },
   image: {
     marginRight: '10px',

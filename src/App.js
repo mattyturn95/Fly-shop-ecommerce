@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
+import Header from './components/Header/Header';
 
 const App = () => {
   const [mobileOpen, setMobileOpen] = React.useState(false);
@@ -72,7 +73,9 @@ const App = () => {
   const handleDrawerToggle = () => setMobileOpen(!mobileOpen);
 
   return (
+
     <Router>
+      <Header />
       <div style={{ display: 'flex' }}>
         <CssBaseline />
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
