@@ -5,9 +5,10 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { Navbar, Products, Cart, Checkout } from './components';
 import { commerce } from './lib/commerce';
 import Header from './components/Header/Header';
-import ExperienceAlaska from './components/ExperienceAlaska/ExperienceAlaska';
+import UltimateFlyExperience from './components/UltimateFlyExperience/UltimateFlyExperience';
 
-const App = () => {
+
+function App() {
   const [mobileOpen, setMobileOpen] = React.useState(false);
   const [products, setProducts] = useState([]);
   const [cart, setCart] = useState({});
@@ -77,7 +78,8 @@ const App = () => {
 
     <Router>
       <Header />
-      <ExperienceAlaska/>
+      <UltimateFlyExperience />
+
       <div style={{ display: 'flex' }}>
         <CssBaseline />
         <Navbar totalItems={cart.total_items} handleDrawerToggle={handleDrawerToggle} />
@@ -95,6 +97,6 @@ const App = () => {
       </div>
     </Router>
   );
-};
+}
 
 export default App;

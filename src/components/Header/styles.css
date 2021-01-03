@@ -8,10 +8,11 @@
     font-size: 50px;
     font-family: 'Monoton', cursive;
     top: 300px;
+    left: 400px;
     width: 800px;
     height: 90px;
     padding: 20px;
     color: #fff;
-    box-sizing: border-box;
+    
 }
 
