@@ -19,6 +19,7 @@ export default makeStyles((theme) => ({
   },
   link: {
     textDecoration: 'none',
+    textAlign: 'center'
   },
   cardDetails: {
     display: 'flex',
